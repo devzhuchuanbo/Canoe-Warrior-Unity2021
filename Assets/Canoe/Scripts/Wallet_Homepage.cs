@@ -1,6 +1,7 @@
 using Canoe;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,15 +9,20 @@ public class Wallet_Homepage : MonoBehaviour
 {
     public Text SOLValue;
     public Text AARTValue;
-    
-    public async void UpdateBalance()
-    { 
-   double solBalance= await CanoeDeFi.Instance.GetSolAmmountAsync(); 
-   //double aartBalance= await CanoeDeFi.Instance.GetOwnedTokenAccounts(); 
-    }
-    public async void UpdateAARTValue()
+    private async void OnEnable()
     {
-       var tokenResults= await CanoeDeFi.Instance.GetOwnedTokenAccounts(); 
+      await  UpdateBalance();
+      await  UpdateAARTValue();
     }
-  
+    public async Task UpdateBalance()
+    {
+        double solBalance = await CanoeDeFi.Instance.GetSolAmmountAsync();
+        SOLValue.text = solBalance.ToString();
+        //double aartBalance= await CanoeDeFi.Instance.GetOwnedTokenAccounts(); 
+    }
+    public async Task UpdateAARTValue()
+    {
+        var tokenResults = await CanoeDeFi.Instance.GetOwnedTokenAccounts();
+    }
+
 }

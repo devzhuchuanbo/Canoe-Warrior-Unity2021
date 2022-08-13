@@ -10,6 +10,8 @@ public class Wallet_GenerateWalletConfirm : MonoBehaviour
 {
     public Text[] Texts;
     public Button[] Selections;
+
+    private Queue<Text> textQueue = new Queue<Text>();
     private void OnEnable()
     {
         Reset();
@@ -20,6 +22,10 @@ public class Wallet_GenerateWalletConfirm : MonoBehaviour
         {
             item.text = "--";
         }
+        textQueue.Clear();
+        textQueue = new Queue<Text>(Texts);
+
+
         // fill the selections
         Mnemonic mnemonic = WalletController.Instance.Mnemonic;
         string[] words = mnemonic.ToString().Split(" ");
@@ -33,66 +39,56 @@ public class Wallet_GenerateWalletConfirm : MonoBehaviour
         for (int i = 0; i < Selections.Length; i++)
         {
             Selections[i].GetComponent<Text>().text = words[i];
-            Selections[i].GetComponent<GernerateWalletConfirmItem>().index = i;
             Selections[i].GetComponent<GernerateWalletConfirmItem>().word = words[i];
         }
-
     }
-    public void OnSelectionCick(int index,Text text)
+    public void OnSelectionCick(Text text)
     {
         if (string.IsNullOrEmpty(text.text))
         {
             return;
         }
-        //fill mnemonic text
-        Debug.Log($"Index of{index} clicked, hold string{text.text}");
-        Texts[index].text=text.text;
-        text.text = "" ;
+        //fill a mnemonic text
+        //Debug.Log($"Index of{index} clicked, hold string{text.text}");
+        Text _text = textQueue.Dequeue();
+        _text.text = text.text;
+        text.text = "";
+
 
         //check if is the last one
-        bool isLast = false;
-        foreach (var item in Texts)
+        if (textQueue.Count==0)
         {
-            if (!string.IsNullOrEmpty(item.text))
-            {
-                isLast = false;
-            }
-        }
-
-
-        //check result
-        if (isLast)
-        {
-         bool tf=CheckResult();
+            bool tf = CheckResult();
             // wrong mnemonic
             if (!tf)
             {
-               WalletController.Instance.ShowNotice("Incorrect mnemonic");
+                WalletController.Instance.ShowNotice("Incorrect mnemonic");
                 Reset();
             }
             else
             {
                 //create wallet
                 //enter wallet page
-                CanoeDeFi.Instance.LoginWithNewGeneratedWallet(WalletController.Instance.Mnemonic,WalletController.Instance.PASSWORD);
+                CanoeDeFi.Instance.LoginWithNewGeneratedWallet(WalletController.Instance.Mnemonic, WalletController.Instance.PASSWORD);
+                Debug.Log("New wallet login~");
             }
         }
     }
 
-    private  bool CheckResult()
+    private bool CheckResult()
     {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < Texts.Length; i++)
         {
             sb.Append(Texts[i].text);
-            if (i!= Texts.Length-1)
+            if (i != Texts.Length - 1)
             {
                 sb.Append(" ");
             }
         }
 
         Mnemonic _selected = new Mnemonic(sb.ToString());
-        if (_selected==WalletController.Instance.Mnemonic)
+        if (_selected.ToString() == WalletController.Instance.Mnemonic.ToString())
         {
             return true;
         }

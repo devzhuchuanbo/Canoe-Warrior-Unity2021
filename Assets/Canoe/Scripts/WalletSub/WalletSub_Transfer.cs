@@ -1,8 +1,10 @@
 using Canoe;
+using Cysharp.Threading.Tasks;
 using Solana.Unity.Rpc.Core.Http;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +15,13 @@ public class WalletSub_Transfer : MonoBehaviour
     public Image TokenImage;
     public bool isTransferSOL = true;
 
-    private UInt32 transferAmount = 0;
+    private double transferAmount = 0;
+
+    private void OnEnable()
+    {
+        TargetAddress.text = "";
+        TargetAddress.text = "0";
+    }
     public void SelectSOL()
     {
         isTransferSOL = true;
@@ -23,20 +31,37 @@ public class WalletSub_Transfer : MonoBehaviour
         isTransferSOL = false;
     }
     public void SetAllBtn()
-    { 
+    {
 
     }
-    public async void TransferBtn()
+    public void TestBtn()
+    {
+        Debug.Log("Start transfer");
+        Func<UniTaskVoid> ClickAfterSeconds = async () =>
+        {
+            while (true)
+            {
+                await UniTask.Delay(TimeSpan.FromSeconds(5.0));                 //µ»¥˝5√Î÷” 
+                Debug.Log("5s");
+            }
+
+        };
+        ClickAfterSeconds();
+
+        Debug.Log("Done");
+
+    }
+    public void TransferBtn()
     {
         if (string.IsNullOrEmpty(TargetAddress.text))
         {
             WalletController.Instance.ShowNotice("address can't be empty");
             return;
         }
-       
+
         try
         {
-            transferAmount = Convert.ToUInt32(Amount.text);
+            transferAmount = Convert.ToDouble(Amount.text);
             if (transferAmount == 0)
             {
                 WalletController.Instance.ShowNotice("amount can't be zero");
@@ -61,15 +86,37 @@ public class WalletSub_Transfer : MonoBehaviour
                 //AART
                 transferAmount *= 1000000;
             }
-            RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, transferAmount);
-            if (transferResult.Reason!="OK"|| transferResult.Reason != "ok")
+
+            Func<UniTaskVoid> ClickAfterSeconds = async () =>
             {
-                WalletController.Instance.ShowNotice("The request is successful!");
-            }
-            else
-            {
-                WalletController.Instance.ShowNotice("The request is failed!");
-            }
+                //while (true)
+                //{
+                    //await UniTask.Delay(TimeSpan.FromSeconds(5.0));                 //µ»¥˝5√Î÷” 
+                    //await UniTask.Delay(TimeSpan.FromSeconds(5.0));                 //µ»¥˝5√Î÷”
+                    RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, (ulong)transferAmount);
+                    Debug.Log("5s");
+                    if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
+                    {
+                        WalletController.Instance.ShowNotice("The request is successful!");
+                    }
+                    else
+                    {
+                        WalletController.Instance.ShowNotice("The request is failed!");
+                    }
+                //}
+
+            };
+            ClickAfterSeconds();
+
+            //RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, (ulong)transferAmount);
+            //if (transferResult.Reason!="OK"|| transferResult.Reason != "ok")
+            //{
+            //    WalletController.Instance.ShowNotice("The request is successful!");
+            //}
+            //else
+            //{
+            //    WalletController.Instance.ShowNotice("The request is failed!");
+            //}
         }
     }
 }

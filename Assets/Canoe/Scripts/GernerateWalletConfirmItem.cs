@@ -7,8 +7,6 @@ public class GernerateWalletConfirmItem : MonoBehaviour
 {
     [HideInInspector]
     public string word;
-    [HideInInspector]
-    public int index;
     public Wallet_GenerateWalletConfirm wallet_GenerateWalletConfirm;
 
     Text text;
@@ -21,6 +19,6 @@ public class GernerateWalletConfirmItem : MonoBehaviour
     }
     public void OnBtnClick()
     {
-        wallet_GenerateWalletConfirm.OnSelectionCick(index, text);
+        wallet_GenerateWalletConfirm.OnSelectionCick(text);
     }
 }

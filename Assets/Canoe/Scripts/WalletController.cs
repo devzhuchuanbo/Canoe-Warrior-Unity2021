@@ -59,7 +59,16 @@ public class WalletController : MonoBehaviour
         }
         else
         {
-            Panel_Homepage.SetActive(true);
+            //login with pwd
+          bool loginResult=  CanoeDeFi.Instance.LoginWithPwd(PASSWORD);
+            if (loginResult)
+            {
+                Panel_Homepage.SetActive(true);
+            }
+            else
+            {
+                ShowNotice("Network error");
+            }
         }
     }
     public void ShowWalletHomePage()

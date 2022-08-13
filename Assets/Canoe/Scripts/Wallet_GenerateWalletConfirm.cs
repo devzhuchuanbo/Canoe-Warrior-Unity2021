@@ -33,8 +33,8 @@ public class Wallet_GenerateWalletConfirm : MonoBehaviour
         for (int i = 0; i < Selections.Length; i++)
         {
             Selections[i].GetComponent<Text>().text = words[i];
-            // add click events
-            Selections[i].onClick.AddListener(delegate () { OnSelectionCick(i, Selections[i].GetComponent<Text>()); });
+            Selections[i].GetComponent<GernerateWalletConfirmItem>().index = i;
+            Selections[i].GetComponent<GernerateWalletConfirmItem>().word = words[i];
         }
 
     }

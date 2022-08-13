@@ -1230,7 +1230,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 323898642468620254}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8300507955071949741}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &505578869900586994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,6 +1676,7 @@ GameObject:
   - component: {fileID: 5283306088996570145}
   - component: {fileID: 2480156927699967718}
   - component: {fileID: 1106543974107106215}
+  - component: {fileID: 3393249712197734329}
   m_Layer: 5
   m_Name: Word (10)
   m_TagString: Untagged
@@ -1792,6 +1805,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3393249712197734329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593965784034331296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &633489907414004054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,6 +2710,7 @@ GameObject:
   - component: {fileID: 8447553048155152962}
   - component: {fileID: 3411801310664128819}
   - component: {fileID: 481452029684848884}
+  - component: {fileID: 6596293227120675921}
   m_Layer: 5
   m_Name: Word (11)
   m_TagString: Untagged
@@ -2810,6 +2839,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6596293227120675921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017459675930164243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &1149911926583252156
 GameObject:
   m_ObjectHideFlags: 0
@@ -6960,6 +7004,7 @@ GameObject:
   - component: {fileID: 7788821752702973751}
   - component: {fileID: 232750792149369552}
   - component: {fileID: 1974152019638203926}
+  - component: {fileID: 2482177636887637820}
   m_Layer: 5
   m_Name: Word (5)
   m_TagString: Untagged
@@ -7088,6 +7133,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2482177636887637820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3342889860505589254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &3350089266032055805
 GameObject:
   m_ObjectHideFlags: 0
@@ -7534,6 +7594,7 @@ GameObject:
   - component: {fileID: 4224392313649265351}
   - component: {fileID: 68258314820426686}
   - component: {fileID: 1069895982844778609}
+  - component: {fileID: 3655961768432971391}
   m_Layer: 5
   m_Name: Word (7)
   m_TagString: Untagged
@@ -7662,6 +7723,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3655961768432971391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3609984053860959352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &3621328795338010469
 GameObject:
   m_ObjectHideFlags: 0
@@ -11547,6 +11623,7 @@ GameObject:
   - component: {fileID: 8688580745249345368}
   - component: {fileID: 461070193682660695}
   - component: {fileID: 2396988744637606158}
+  - component: {fileID: 2024570644064444409}
   m_Layer: 5
   m_Name: Word (4)
   m_TagString: Untagged
@@ -11675,6 +11752,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2024570644064444409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5033747995771488643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &5038037408062861039
 GameObject:
   m_ObjectHideFlags: 0
@@ -12091,7 +12183,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8631871887251804791}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7823177016817938389}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &5172070675196700168
 GameObject:
   m_ObjectHideFlags: 0
@@ -13242,6 +13346,7 @@ GameObject:
   - component: {fileID: 4675233097912283051}
   - component: {fileID: 8813036003810107761}
   - component: {fileID: 100925459829256219}
+  - component: {fileID: 6495062883477554813}
   m_Layer: 5
   m_Name: Word (12)
   m_TagString: Untagged
@@ -13370,6 +13475,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6495062883477554813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620061441401061159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &5662519595070747118
 GameObject:
   m_ObjectHideFlags: 0
@@ -13872,6 +13992,7 @@ GameObject:
   - component: {fileID: 258140383961108782}
   - component: {fileID: 6753573913941019652}
   - component: {fileID: 6963360946056398998}
+  - component: {fileID: 561180759370483901}
   m_Layer: 5
   m_Name: Word (9)
   m_TagString: Untagged
@@ -14000,6 +14121,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &561180759370483901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103782950539780934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &6110885393990636061
 GameObject:
   m_ObjectHideFlags: 0
@@ -14360,6 +14496,7 @@ GameObject:
   - component: {fileID: 6094919886089268130}
   - component: {fileID: 829265459696942735}
   - component: {fileID: 2294379060306064292}
+  - component: {fileID: 5559744745754411985}
   m_Layer: 5
   m_Name: Word (3)
   m_TagString: Untagged
@@ -14488,6 +14625,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5559744745754411985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6303936506958928622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &6316369033313125383
 GameObject:
   m_ObjectHideFlags: 0
@@ -16211,6 +16363,7 @@ GameObject:
   - component: {fileID: 5253114039648162925}
   - component: {fileID: 1885542793155686831}
   - component: {fileID: 8431610948388164446}
+  - component: {fileID: 8157986068802429770}
   m_Layer: 5
   m_Name: Word (8)
   m_TagString: Untagged
@@ -16339,6 +16492,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8157986068802429770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7331619740291455357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &7333376987003558434
 GameObject:
   m_ObjectHideFlags: 0
@@ -16352,6 +16520,7 @@ GameObject:
   - component: {fileID: 2087828891241992116}
   - component: {fileID: 7994218743254786672}
   - component: {fileID: 3512406710166792956}
+  - component: {fileID: 5917524106983707543}
   m_Layer: 5
   m_Name: Word (2)
   m_TagString: Untagged
@@ -16480,6 +16649,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5917524106983707543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7333376987003558434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &7488770863674787359
 GameObject:
   m_ObjectHideFlags: 0
@@ -16531,6 +16715,7 @@ GameObject:
   - component: {fileID: 4850098583828786835}
   - component: {fileID: 1099578683120340524}
   - component: {fileID: 6367858091858156718}
+  - component: {fileID: 367156005211237372}
   m_Layer: 5
   m_Name: Word (6)
   m_TagString: Untagged
@@ -16659,6 +16844,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &367156005211237372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539376217729246997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &7584359660014590367
 GameObject:
   m_ObjectHideFlags: 0
@@ -17226,6 +17426,7 @@ GameObject:
   - component: {fileID: 942850832787136526}
   - component: {fileID: 1644477413983133180}
   - component: {fileID: 4204082409065909036}
+  - component: {fileID: 3493356052420322347}
   m_Layer: 5
   m_Name: Word (1)
   m_TagString: Untagged
@@ -17354,6 +17555,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3493356052420322347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7790090093282636752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f4b16ed89ca744da109c6fc103c5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  index: 0
+  wallet_GenerateWalletConfirm: {fileID: 5395044348702016244}
 --- !u!1 &7823177016817938389
 GameObject:
   m_ObjectHideFlags: 0

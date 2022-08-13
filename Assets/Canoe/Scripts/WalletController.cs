@@ -47,7 +47,7 @@ public class WalletController : MonoBehaviour
     void Start()
     {
         //UniClipboard.SetText("text you want to clip");
-       CanoeDeFi.Instance.HasWallet();   
+        WalletStart();
     }
 
     // when wallet need to be shown

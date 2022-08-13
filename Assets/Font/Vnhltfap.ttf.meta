@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3d319a3fcaf84c3d873e95afb8deeb46
+timeCreated: 1561526935
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 160
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  fontName: "Vnhltfap"
+  fontNames:
+  - VNI-HLThuphap
+  - thufap
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData:
+  assetBundleName: 
+  assetBundleVariant: 

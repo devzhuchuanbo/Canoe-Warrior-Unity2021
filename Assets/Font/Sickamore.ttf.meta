@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 445c4813930b49629b0d48385498b8db
+timeCreated: 1561526891
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 300
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  fontName: "Sickamore"
+  fontNames:
+  - Sickamore
+  - NinjaFont
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData:
+  assetBundleName: 
+  assetBundleVariant: 

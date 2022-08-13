@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: b966bfbc11c343c78b4c95c8bb2b5115
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: diahinh1
+  - first:
+      213: 21300002
+    second: diahinh6
+  - first:
+      213: 21300004
+    second: hang1
+  - first:
+      213: 21300006
+    second: hang2
+  - first:
+      213: 21300008
+    second: cot
+  - first:
+      213: 21300010
+    second: gocnhongai
+  - first:
+      213: 21300012
+    second: diahinh7
+  - first:
+      213: 21300014
+    second: diahinh5
+  - first:
+      213: 21300016
+    second: diahinh3
+  - first:
+      213: 21300018
+    second: diahinh9
+  - first:
+      213: 21300020
+    second: dungnhamnut
+  - first:
+      213: 21300022
+    second: diahinh10
+  - first:
+      213: 21300024
+    second: diahinh_12
+  - first:
+      213: 21300026
+    second: dungnham2
+  - first:
+      213: 21300028
+    second: diahinh2
+  - first:
+      213: 21300030
+    second: diahinh4
+  - first:
+      213: 21300032
+    second: diahinh8
+  - first:
+      213: 21300034
+    second: dungnham1
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hang1
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 171.0761
+        width: 381.9239
+        height: 597.8478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb11689cbad46e64c95de9496d04142a
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh8
+      rect:
+        serializedVersion: 2
+        x: 1527.076
+        y: 1511
+        width: 449.9239
+        height: 105.9239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d5c9a6762a2064289b09c8452ab22a
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh2
+      rect:
+        serializedVersion: 2
+        x: 533.0761
+        y: 1909
+        width: 777.8478
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6134116a30c0f5343ad54ee3fd5a351d
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh6
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1511
+        width: 475.9239
+        height: 107.9436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84376e23fe5b22c44a6c05bc816827dd
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hang2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 137.0761
+        width: 389.9239
+        height: 219.9239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1468ec878383541bd1d6bf1427b544
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1721
+        width: 443.9239
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6e1d550941d0d4db5133e7ebd95316
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gocnhongai
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1249.076
+        width: 181
+        height: 191.9239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edff266bb255db4ca49c7c42dd2b471
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungnhamnut
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 849
+        width: 308
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bff0cdf8d3f5b4ea5fae57ba3780b3
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh4
+      rect:
+        serializedVersion: 2
+        x: 1417.076
+        y: 1755.076
+        width: 217.8477
+        height: 261.9239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15fcbe2d1d48ed47b461d997d7aa858
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungnham1
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 521.0761
+        width: 370
+        height: 423.8478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8900910bf904a4bb878c470cd09870
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh9
+      rect:
+        serializedVersion: 2
+        x: 29.07612
+        y: 1011
+        width: 445.9239
+        height: 461.9239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18df80d57c302a240b1ec885ccf4127f
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh3
+      rect:
+        serializedVersion: 2
+        x: 539.0513
+        y: 1725.076
+        width: 773.8726
+        height: 165.8477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db18b93ec1491a488c58397192a33bb
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh10
+      rect:
+        serializedVersion: 2
+        x: 623.0761
+        y: 997
+        width: 444.9239
+        height: 459.9239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49663bec164736f4985fec80da84cea1
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh_12
+      rect:
+        serializedVersion: 2
+        x: 41.07612
+        y: 723
+        width: 245.8477
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa73d99e30db4a745bbb612c6d15eef7
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh7
+      rect:
+        serializedVersion: 2
+        x: 611.0761
+        y: 1509
+        width: 805.8478
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34e8bb9ac423ad4cb037068fac41282
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cot
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1078
+        width: 48
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c6ddd4f65710143be8087406488968
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungnham2
+      rect:
+        serializedVersion: 2
+        x: 1483.076
+        y: 841
+        width: 383.9239
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b3f225e5ed83c428be15b65961bbff
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diahinh5
+      rect:
+        serializedVersion: 2
+        x: 1761.076
+        y: 1741
+        width: 205.9239
+        height: 239.9733
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c704892bfe008a042bebe0e454d556bd
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      diahinh10: 21300022
+      dungnham2: 21300026
+      diahinh4: 21300030
+      diahinh3: 21300016
+      hang2: 21300006
+      diahinh1: 21300000
+      diahinh5: 21300014
+      dungnham1: 21300034
+      diahinh7: 21300012
+      diahinh2: 21300028
+      diahinh6: 21300002
+      dungnhamnut: 21300020
+      diahinh9: 21300018
+      diahinh8: 21300032
+      cot: 21300008
+      diahinh_12: 21300024
+      gocnhongai: 21300010
+      hang1: 21300004
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

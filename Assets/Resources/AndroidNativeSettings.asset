@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42a0611b8165bcd0d5e829359006c31, type: 3}
+  m_Name: "AndroidNativeSettings"
+  m_EditorClassIdentifier: 
+  EnablePlusAPI: 1
+  EnableGamesAPI: 1
+  EnableAppInviteAPI: 1
+  EnableDriveAPI: 0
+  LoadProfileIcons: 1
+  LoadProfileImages: 0
+  LoadQuestsImages: 1
+  LoadQuestsIcons: 1
+  LoadEventsIcons: 1
+  ShowConnectingPopup: 1
+  EnableATCSupport: 0
+  OneSignalEnabled: 0
+  OneSignalAppID: "YOUR_ONESIGNAL_APP_ID"
+  OneSignalDownloadLink: "https:\x2f\x2fgoo.gl\x2fVc6tfK"
+  OneSignalDocLink: "https:\x2f\x2fgoo.gl\x2faZjkxV"
+  UseParsePushNotifications: 0
+  ParseAppId: "YOUR_PARSE_APP_ID"
+  DotNetKey: "YOUR_PARSE_DOT_NET_KEY"
+  ParseDocLink: "http:\x2f\x2fgoo.gl\x2f9BgQ8r"
+  ParseDownloadLink: "https:\x2f\x2fgoo.gl\x2fdm7jYL"
+  DialogTheme: 0
+  EnableSoomla: 0
+  SoomlaDownloadLink: "http:\x2f\x2fgoo.gl\x2f7LYwuj"
+  SoomlaDocsLink: "https:\x2f\x2fgoo.gl\x2fes5j1N"
+  SoomlaGameKey: 
+  SoomlaEnvKey: 
+  Ad_EditorFillRateIndex: 4
+  Ad_EditorFillRate: 100
+  Is_Ad_EditorTestingEnabled: 0
+  InApps_EditorFillRateIndex: 4
+  InApps_EditorFillRate: 100
+  Is_InApps_EditorTestingEnabled: 1
+  Is_Leaderboards_Editor_Notifications_Enabled: 0
+  Is_Achievements_Editor_Notifications_Enabled: 0
+  GCM_SenderId: "YOUR_SENDER_ID_HERE"
+  PushService: 0
+  SaveCameraImageToGallery: 0
+  UseProductNameAsFolderName: 1
+  GalleryFolderName: "Ninja Arashi"
+  MaxImageLoadSize: 512
+  CameraCaptureMode: 0
+  ImageFormat: 0
+  ShowAppPermissions: 1
+  EnableBillingAPI: 1
+  EnablePSAPI: 1
+  EnableSocialAPI: 0
+  EnableCameraAPI: 0
+  ExpandNativeAPI: 1
+  ExpandPSAPI: 1
+  ExpandBillingAPI: 1
+  ExpandSocialAPI: 1
+  ExpandCameraAPI: 1
+  ThirdPartyParams: 0
+  ShowPSSettingsResources: 0
+  ShowActions: 0
+  GCMSettingsActinve: 0
+  LocalNotificationsAPI: 0
+  ImmersiveModeAPI: 0
+  ApplicationInformationAPI: 0
+  ExternalAppsAPI: 0
+  PoupsandPreloadersAPI: 0
+  CheckAppLicenseAPI: 0
+  NetworkStateAPI: 0
+  FirebaseAnalytics: 0
+  InAppPurchasesAPI: 1
+  GooglePlayServicesAPI: 0
+  PlayServicesAdvancedSignInAPI: 0
+  GoogleButtonAPI: 0
+  AnalyticsAPI: 0
+  GoogleCloudSaveAPI: 0
+  PushNotificationsAPI: 0
+  GoogleMobileAdAPI: 1
+  GoogleOAuthAPI: 0
+  GalleryAPI: 0
+  CameraAPI: 0
+  KeepManifestClean: 1
+  GooglePlayServiceAppID: "216817929098"
+  ToolbarSelectedIndex: 2
+  base64EncodedPublicKey: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6ciGqYITQMVwRUYO6A40niaMs2KlaQju29Zqdssj+g7bO55M8oY1qWgvvJPkmwcWTo2qzXEBeeofd2MqpS2hMT6nRwshVcWffht1C2eNsr0WsiX5kKsArVzf\x2f33VmkBLbiWG+\x2fWnAGYfb0xdSj2rbAGKPU40U3O+EYWPyhwadfYd5ttZYH6Erxx4Mfx5\x2fbysjWHJhtC9K9kqnLq8sK6lB9etc52iQUiQ71JtFRGYHXiFhC0XLC6fhByZ9Pb+stV+NG89b+dRiuMdkVIncyV4NwBY8mtbNTPlVNN08kWDrlFbvhEYVideqGkfuTVRY2K8W2vyh2cuVst\x2fZ7RkFTQGQQIDAQAB"
+  ShowStoreProducts: 1
+  InAppProducts:
+  - IsOpen: 0
+    SKU: "coin"
+    _LocalizedPrice: "0.99 $"
+    _PriceAmountMicros: 990000
+    _PriceCurrencyCode: "USD"
+    _Description: "Buy 20000 Golds"
+    _Title: "20000 Golds"
+    _Texture: {fileID: 0}
+    _ProductType: 0
+  - IsOpen: 0
+    SKU: "dm"
+    _LocalizedPrice: "0.99 $"
+    _PriceAmountMicros: 990000
+    _PriceCurrencyCode: "USD"
+    _Description: "Buy 2000 diamonds"
+    _Title: "2000 diamonds"
+    _Texture: {fileID: 0}
+    _ProductType: 0
+  - IsOpen: 0
+    SKU: "noads"
+    _LocalizedPrice: "0.99 $"
+    _PriceAmountMicros: 990000
+    _PriceCurrencyCode: "USD"
+    _Description: "Remove force ads in game Ninja Arashi"
+    _Title: "Remove Ads"
+    _Texture: {fileID: 0}
+    _ProductType: 1
+  - IsOpen: 0
+    SKU: "halo"
+    _LocalizedPrice: "0.99 $"
+    _PriceAmountMicros: 990000
+    _PriceCurrencyCode: "USD"
+    _Description: "Add 30000 golds,3000 diamonds and pumpkin Arashi head & disguise"
+    _Title: "Special Halloween Offer"
+    _Texture: {fileID: 0}
+    _ProductType: 1
+  ShowLeaderboards: 1
+  Leaderboards: []
+  ShowAchievements: 1
+  Achievements: []
+  ShowWhenAppIsForeground: 1
+  EnableVibrationLocal: 0
+  LocalNotificationSmallIcon: {fileID: 0}
+  LocalNotificationLargeIcon: {fileID: 0}
+  LocalNotificationSound: {fileID: 0}
+  LocalNotificationWakeLockTimer: 10000
+  ReplaceOldNotificationWithNew: 0
+  ShowPushWhenAppIsForeground: 1
+  EnableVibrationPush: 0
+  PushNotificationColor: {r: 1, g: 1, b: 1, a: 1}
+  PushNotificationSmallIcon: {fileID: 0}
+  PushNotificationLargeIcon: {fileID: 0}
+  PushNotificationSound: {fileID: 0}

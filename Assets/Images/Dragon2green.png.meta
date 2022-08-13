@@ -1,0 +1,997 @@
+fileFormatVersion: 2
+guid: 13b2cc6be9a42984ab37662f5b162087
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Dragon2green_0
+  - first:
+      213: 21300002
+    second: Dragon2green_1
+  - first:
+      213: 21300004
+    second: Dragon2green_2
+  - first:
+      213: 21300006
+    second: Dragon2green_3
+  - first:
+      213: 21300008
+    second: Dragon2green_4
+  - first:
+      213: 21300010
+    second: Dragon2green_5
+  - first:
+      213: 21300012
+    second: Dragon2green_6
+  - first:
+      213: 21300014
+    second: Dragon2green_7
+  - first:
+      213: 21300016
+    second: Dragon2green_8
+  - first:
+      213: 21300018
+    second: Dragon2green_9
+  - first:
+      213: 21300020
+    second: Dragon2green_10
+  - first:
+      213: 21300022
+    second: Dragon2green_11
+  - first:
+      213: 21300024
+    second: Dragon2green_12
+  - first:
+      213: 21300026
+    second: Dragon2green_13
+  - first:
+      213: 21300028
+    second: Dragon2green_14
+  - first:
+      213: 21300030
+    second: Dragon2green_15
+  - first:
+      213: 21300032
+    second: Dragon2green_16
+  - first:
+      213: 21300034
+    second: Dragon2green_17
+  - first:
+      213: 21300036
+    second: Dragon2green_18
+  - first:
+      213: 21300038
+    second: Dragon2green_19
+  - first:
+      213: 21300040
+    second: Dragon2green_20
+  - first:
+      213: 21300042
+    second: Dragon2green_21
+  - first:
+      213: 21300044
+    second: Dragon2green_22
+  - first:
+      213: 21300046
+    second: Dragon2green_23
+  - first:
+      213: 21300048
+    second: Dragon2green_24
+  - first:
+      213: 21300050
+    second: Dragon2green_25
+  - first:
+      213: 21300052
+    second: Dragon2green_26
+  - first:
+      213: 21300054
+    second: Dragon2green_27
+  - first:
+      213: 21300056
+    second: Dragon2green_28
+  - first:
+      213: 21300058
+    second: Dragon2green_29
+  - first:
+      213: 21300060
+    second: Dragon2green_30
+  - first:
+      213: 21300062
+    second: Dragon2green_31
+  - first:
+      213: 21300064
+    second: Dragon2green_32
+  - first:
+      213: 21300066
+    second: Dragon2green_33
+  - first:
+      213: 21300068
+    second: Dragon2green_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dragon2green_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 644
+        width: 127
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338e6ac5f972ea54fbe0e916d06b1505
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 644
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4651bad447ed6894a9e5f55469e4aea5
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_2
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 640
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5610c788b1044c6408820155b146da69
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_3
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 616
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7879259fe5d3c134ebddfe1549c1f022
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_4
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 612
+        width: 71
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a30ad88bf5a0cd4cab334aa1cf415d7
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 591
+        width: 128
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76d2475ca8d4dc47a3febdb71e5538e
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 589
+        width: 89
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ca76d4467d38c4ead000864017023f
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 576
+        width: 76
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98710db0c18dd647af64ec0b4a22690
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_8
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 559
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c726c26622570e49a846542b016fd6b
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_9
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 579
+        width: 127
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494099e950d9ebe44aa2b34f2318aa22
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_10
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 559
+        width: 60
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a9e72f95471da44a77f56b9744ef3b
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 447
+        width: 194
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a58e659620ff7b4eb5a32debc88f4d8
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_12
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 446
+        width: 48
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0865ffbd6710994386d88e6e0b74062
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_13
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 446
+        width: 48
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd8eb133a0568147bd8106296319018
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_14
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 528
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682bf6956d383914cb453bfad6940f9f
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_15
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 509
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815d12bb8daffe04f8b76429ef53380d
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_16
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 528
+        width: 127
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c798fa5bf3acd0409a6a7bfcb5fc400
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_17
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 428
+        width: 48
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a01b3d28d621ec489c2d7c61f103b5a
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_18
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 397
+        width: 48
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09ca92174446f041b38121c65e00b0d
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_19
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 459
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12278b3deb183046b11b517ab687a8e
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_20
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 478
+        width: 127
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046df567cadab914d8ddf87719ccd7e5
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 280
+        width: 265
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f96272c9578084cb5ceee00f9cc010
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_22
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 408
+        width: 128
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1937ef5f074868040a07952b8c6a1a6e
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_23
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 428
+        width: 127
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ed860fe9d93134a945218ebbb21b19
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_24
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 281
+        width: 99
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1517adcf141414980e147c3a7db2a2
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_25
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 278
+        width: 48
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570a4fc13a1daeb40842da83a42c1524
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_26
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 279
+        width: 48
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4438f1f832d5d7e46ab45360762a8ba6
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_27
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 267
+        width: 48
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b225f17134572499a18df0ee2b76e1
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_28
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 378
+        width: 127
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19183097a1343bb47a0b4a77cbaae6b5
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_29
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 327
+        width: 127
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198d851980a6a194a89798552cd1ccd9
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_30
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 277
+        width: 127
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032549e2baf8fba459b96d5fea21b126
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_31
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 452
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f87c6280cee21941921a2e1740d52ec
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_32
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 197
+        width: 117
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10af127bc89fb842b388cbabf6341a9
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_33
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 179
+        width: 87
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108acc6ec89a9f046994416b0ba6b86c
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon2green_34
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 0
+        width: 190
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcef278a97b1f824b9a5e97b48419367
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Dragon2green_18: 21300036
+      Dragon2green_13: 21300026
+      Dragon2green_2: 21300004
+      Dragon2green_0: 21300000
+      Dragon2green_19: 21300038
+      Dragon2green_8: 21300016
+      Dragon2green_1: 21300002
+      Dragon2green_9: 21300018
+      Dragon2green_16: 21300032
+      Dragon2green_21: 21300042
+      Dragon2green_12: 21300024
+      Dragon2green_28: 21300056
+      Dragon2green_24: 21300048
+      Dragon2green_22: 21300044
+      Dragon2green_15: 21300030
+      Dragon2green_30: 21300060
+      Dragon2green_34: 21300068
+      Dragon2green_23: 21300046
+      Dragon2green_4: 21300008
+      Dragon2green_6: 21300012
+      Dragon2green_3: 21300006
+      Dragon2green_11: 21300022
+      Dragon2green_27: 21300054
+      Dragon2green_20: 21300040
+      Dragon2green_29: 21300058
+      Dragon2green_31: 21300062
+      Dragon2green_5: 21300010
+      Dragon2green_32: 21300064
+      Dragon2green_33: 21300066
+      Dragon2green_26: 21300052
+      Dragon2green_10: 21300020
+      Dragon2green_17: 21300034
+      Dragon2green_7: 21300014
+      Dragon2green_14: 21300028
+      Dragon2green_25: 21300050
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,522 @@
+fileFormatVersion: 2
+guid: 3a2242c0f0f946fdaf36877275661b49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: front_bracer
+  - first:
+      213: 21300002
+    second: front_bracer_right
+  - first:
+      213: 21300004
+    second: neck
+  - first:
+      213: 21300006
+    second: reaper_banchanphai
+  - first:
+      213: 21300008
+    second: reaper_banchantrai
+  - first:
+      213: 21300010
+    second: reaper_body
+  - first:
+      213: 21300012
+    second: reaper_chanphai
+  - first:
+      213: 21300014
+    second: reaper_chantrai
+  - first:
+      213: 21300016
+    second: reaper_duiphai01
+  - first:
+      213: 21300018
+    second: reaper_duitrai01
+  - first:
+      213: 21300020
+    second: reaper_head
+  - first:
+      213: 21300022
+    second: reaper_soul
+  - first:
+      213: 21300024
+    second: reaper_vaiphai
+  - first:
+      213: 21300026
+    second: reaper_vaitrai
+  - first:
+      213: 21300028
+    second: tayphai_bt
+  - first:
+      213: 21300030
+    second: taytrai_bt
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: reaper_soul
+      rect:
+        serializedVersion: 2
+        x: 891.0761
+        y: 291.0761
+        width: 83.84776
+        height: 83.84775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c007018675b69944487d8e4030d43991
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neck
+      rect:
+        serializedVersion: 2
+        x: 841.0267
+        y: 434.0761
+        width: 78.90797
+        height: 74.89713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631113cf2c5f394439e78a1a2e71c059
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_chantrai
+      rect:
+        serializedVersion: 2
+        x: 316.0761
+        y: 299.0761
+        width: 154.8971
+        height: 65.84776
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471a93b9d5765644493f51c7b1b89224
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_vaitrai
+      rect:
+        serializedVersion: 2
+        x: 727.0267
+        y: 327.0761
+        width: 73.89713
+        height: 71.84776
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b26acba6f80974cb628329e04085b8
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_banchantrai
+      rect:
+        serializedVersion: 2
+        x: 442.0268
+        y: 405.0761
+        width: 46.89713
+        height: 87.89713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b85a032d14a214d856cc46085f164c
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: front_bracer_right
+      rect:
+        serializedVersion: 2
+        x: 184.0761
+        y: 328.0268
+        width: 51.84776
+        height: 38.93034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee40971db7f168a4091e77ab4672cf4e
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taytrai_bt
+      rect:
+        serializedVersion: 2
+        x: 534.0267
+        y: 449.0268
+        width: 114.8971
+        height: 49.86768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8ec187e54dc9e418d0a5b0beb8562c
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_body
+      rect:
+        serializedVersion: 2
+        x: 607.0388
+        y: 29.07612
+        width: 235.9345
+        height: 213.8971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6af40b9da59fd46b91f87756224daf
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_vaiphai
+      rect:
+        serializedVersion: 2
+        x: 577.0564
+        y: 317.0268
+        width: 81.90072
+        height: 91.89713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75861a96545d2a428f2e250ce8b0ff1
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tayphai_bt
+      rect:
+        serializedVersion: 2
+        x: 30.02675
+        y: 434.0268
+        width: 114.8971
+        height: 47.89713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eece96d1fd26fd42a0410bfddb72b84
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_duitrai01
+      rect:
+        serializedVersion: 2
+        x: 858.0761
+        y: 43.01291
+        width: 133.8971
+        height: 139.9603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5482542fc6759304eabac9c2a6684b56
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_duiphai01
+      rect:
+        serializedVersion: 2
+        x: 858.0761
+        y: 43.01291
+        width: 133.8971
+        height: 139.9603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca71d1f72490dd45b0ee95b786ce3d8
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_head
+      rect:
+        serializedVersion: 2
+        x: 296.0761
+        y: 386.0268
+        width: 106.881
+        height: 86.89713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f95c149ab1ac7428cc624fc672d0b0
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: front_bracer
+      rect:
+        serializedVersion: 2
+        x: 43.07612
+        y: 326.0429
+        width: 52.84776
+        height: 39.91418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61aad901b67e2d445bbd9b3cc847aa27
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_chanphai
+      rect:
+        serializedVersion: 2
+        x: 316.0761
+        y: 299.0761
+        width: 154.8971
+        height: 65.84776
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbca9deedccda634f85462225a8c043f
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_banchanphai
+      rect:
+        serializedVersion: 2
+        x: 442.0268
+        y: 405.0761
+        width: 46.89713
+        height: 87.89713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fdde40d997c9d46bb17570c513bd0e
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      reaper_duitrai01: 21300018
+      front_bracer: 21300000
+      taytrai_bt: 21300030
+      reaper_duiphai01: 21300016
+      reaper_vaitrai: 21300026
+      reaper_vaiphai: 21300024
+      front_bracer_right: 21300002
+      reaper_chantrai: 21300014
+      reaper_head: 21300020
+      reaper_banchanphai: 21300006
+      neck: 21300004
+      reaper_chanphai: 21300012
+      reaper_soul: 21300022
+      tayphai_bt: 21300028
+      reaper_body: 21300010
+      reaper_banchantrai: 21300008
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

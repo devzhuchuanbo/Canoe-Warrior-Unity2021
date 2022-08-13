@@ -18,13 +18,5 @@ public class Wallet_Homepage : MonoBehaviour
     {
        var tokenResults= await CanoeDeFi.Instance.GetOwnedTokenAccounts(); 
     }
-    public void RecieveBtn()
-    { 
-    }
-    public void TransferBtn()
-    { 
-    }
-    public void TrandeBtn()
-    { 
-    }
+  
 }

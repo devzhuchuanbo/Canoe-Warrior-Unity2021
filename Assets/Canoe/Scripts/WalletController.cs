@@ -1,8 +1,10 @@
 ﻿using Canoe;
+using Solana.Unity.Rpc.Core.Http;
 using Solana.Unity.Wallet;
 using Solana.Unity.Wallet.Bip39;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 [RequireComponent(typeof(CanoeDeFi))]
@@ -78,6 +80,13 @@ public class WalletController : MonoBehaviour
     public void GenerateNewWallet(Mnemonic mnemonic)
     {
         CanoeDeFi.Instance.GenerateNewWallet();
+    }
+
+    public async Task<RequestResult<string>> Reborn()
+    {
+      var  SPLResult = await CanoeDeFi.Instance.GetOwnedTokenAccounts();
+        RequestResult<string> result =  await CanoeDeFi.Instance.TransferToken(SPLResult[0].PublicKey, "xxxxxxxx", CurrentWallet.GetAccount(0), SPLResult[0].Account.Data.Parsed.Info.Mint,3000);
+        return result;
     }
     public void ShowNotice(string msg)
     {

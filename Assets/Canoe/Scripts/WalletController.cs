@@ -122,4 +122,9 @@ public class WalletController : MonoBehaviour
         Panel_Notice.SetActive(true);
         Panel_Notice.GetComponent<Wallet_Notice>().ShowNotice(msg);
     }
+
+    public void OnDead()
+    {
+        
+    }
 }

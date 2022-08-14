@@ -1176,7 +1176,8 @@ public class NinjaMovementScript : MonoBehaviour
 		}
 		else
 		{
-			base.Invoke("iHetMang", 1f);
+			// base.Invoke("iHetMang", 1f);
+			WalletController.Instance.OnDead();
 		}
 	}
 

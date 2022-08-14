@@ -15376,8 +15376,8 @@ MonoBehaviour:
   Panel_CreateWallet: {fileID: 8300507955071949741}
   Panel_CreateWalletConfirm: {fileID: 7933324863759635182}
   Panel_Homepage: {fileID: 2318683317104462097}
-  Panel_OnDead: {fileID: 0}
-  Panel_NoticeDig: {fileID: 0}
+  Panel_OnDead: {fileID: 706149713053054624}
+  Panel_NoticeDig: {fileID: 8756506033092757235}
   Panel_Notice: {fileID: 5287510764184463929}
   HomePage: {fileID: 0}
   SOLBalance: 0

@@ -139,6 +139,7 @@ public class WalletController : MonoBehaviour
     {
         this.onRebornCallback = onRebornCallback;
         // todo ...
+        Panel_OnDead.SetActive(true);
     }
 
     public void OnReborn()

@@ -70,6 +70,8 @@ public class Wallet_GenerateWalletConfirm : MonoBehaviour
                 //create wallet
                 //enter wallet page
                 CanoeDeFi.Instance.LoginWithNewGeneratedWallet(WalletController.Instance.Mnemonic, WalletController.Instance.PASSWORD);
+                WalletController.Instance.ShowWalletHomePage();
+                this.gameObject.SetActive(false);
                 Debug.Log("New wallet login~");
             }
         }

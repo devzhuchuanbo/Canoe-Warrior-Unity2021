@@ -1,5 +1,7 @@
 using Canoe;
+using Solana.Unity.Rpc.Core.Http;
 using Solana.Unity.Rpc.Models;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -10,28 +12,33 @@ public class Wallet_Homepage : MonoBehaviour
 {
     public Text SOLValue;
     public Text AARTValue;
-    private async void OnEnable()
+  
+    private void OnEnable()
     {
-      await  UpdateBalance();
-      await  UpdateAARTValue();
+        RefreshBalance();
     }
-    public async Task UpdateBalance()
+    public void RefreshBalance()
     {
-        double solBalance = await CanoeDeFi.Instance.GetSolAmmountAsync();
-        SOLValue.text = solBalance.ToString();
-        //double aartBalance= await CanoeDeFi.Instance.GetOwnedTokenAccounts(); 
-    }
-    public async Task UpdateAARTValue()
-    {
-       TokenAccount[] tokenResults = await CanoeDeFi.Instance.GetOwnedTokenAccounts();
-        foreach (var item in tokenResults)
+        Func<Task> solBalance = async () =>
         {
-            if (item.Account.Data.Parsed.Info.Mint==WalletController.Instance.AARTMINT)
+            double solBalance = await CanoeDeFi.Instance.GetSolAmmountAsync();
+            SOLValue.text = solBalance.ToString();
+        };
+        solBalance();
+        Func<Task> aartBalance = async () =>
+        {
+            TokenAccount[] tokenResults = await CanoeDeFi.Instance.GetOwnedTokenAccounts();
+            foreach (var item in tokenResults)
             {
-                WalletController.Instance.CurrentAARTTokenAccount = item;
-                AARTValue.text = item.Account.Data.Parsed.Info.TokenAmount.AmountDouble.ToString();
+                if (item.Account.Data.Parsed.Info.Mint == WalletController.Instance.AARTMINT)
+                {
+                    WalletController.Instance.CurrentAARTTokenAccount = item;
+                    AARTValue.text = item.Account.Data.Parsed.Info.TokenAmount.AmountDouble.ToString();
+                }
             }
-        }
+        };
+        aartBalance();
     }
+   
 
 }

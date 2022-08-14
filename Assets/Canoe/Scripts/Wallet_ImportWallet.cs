@@ -33,6 +33,8 @@ public class Wallet_ImportWallet : MonoBehaviour
         {
             //enter the homepage of wallet
             WalletController.Instance.ShowWalletHomePage();
+            this.gameObject.SetActive(false);
+            WalletController.Instance.Panel_NewUser.SetActive(false);
         }
         else
         {

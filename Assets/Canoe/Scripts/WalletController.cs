@@ -31,7 +31,11 @@ public class WalletController : MonoBehaviour
     public GameObject Panel_Notice;
 
     #endregion
+    #region Public Component Members
 
+    public Wallet_Homepage HomePage;
+
+    #endregion
     #region Public Data Members
 
     public Mnemonic Mnemonic;
@@ -48,6 +52,7 @@ public class WalletController : MonoBehaviour
     {
         Instance = this;
         DontDestroyOnLoad(this);
+        HomePage = Panel_Homepage.GetComponent<Wallet_Homepage>();
     }
     // Start is called before the first frame update
     void Start()
@@ -80,6 +85,14 @@ public class WalletController : MonoBehaviour
     public void ShowWalletHomePage()
     {
         Panel_Homepage.SetActive(true);
+    }
+    public void RefreshBanlace()
+    {
+        if (Panel_Homepage.activeInHierarchy)
+        {
+            HomePage.RefreshBalance();
+        }
+        
     }
     public void GenerateNewWallet(Mnemonic mnemonic)
     {

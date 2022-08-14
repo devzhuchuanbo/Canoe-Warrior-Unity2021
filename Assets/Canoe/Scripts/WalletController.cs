@@ -138,6 +138,7 @@ public class WalletController : MonoBehaviour
     public void OnDead(Action onRebornCallback)
     {
         this.onRebornCallback = onRebornCallback;
+        // todo ...
     }
 
     public void OnReborn()

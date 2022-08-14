@@ -76,16 +76,17 @@ public class WalletSub_Transfer : MonoBehaviour
 
         if (isTransferSOL)
         {
-            if (isTransferSOL)
-            {
-                //SOL
-                transferAmount *= 1000000000;
-            }
-            else
-            {
-                //AART
-                transferAmount *= 1000000;
-            }
+            //SOL
+            transferAmount *= 1000000000;
+        }
+        else
+        {
+            //AART
+            transferAmount *= 1000000;
+        }
+        if (isTransferSOL)
+        {
+          
 
             Func<Task> SOLTransferTask = async () =>
             {
@@ -119,8 +120,10 @@ public class WalletSub_Transfer : MonoBehaviour
                         }
                     }
                 }
+                Debug.Log("Prepare to transfer");
                 RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferToken(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, TargetAddress.text, WalletController.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, 6, (ulong)transferAmount);
 
+                Debug.Log("transfer done :" +transferResult.Reason);
                 if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
                 {
                     WalletController.Instance.ShowNotice("The request is successful!");

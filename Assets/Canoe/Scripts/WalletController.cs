@@ -102,6 +102,7 @@ public class WalletController : MonoBehaviour
         }
         RequestResult<string> result = await CanoeDeFi.Instance.TransferToken(CurrentAARTTokenAccount.PublicKey, AARTCANOEADDRESS, CurrentWallet.GetAccount(0), AARTMINT, 6, 29);
         return result;
+        // return null;
     }
     public void ShowNotice(string msg)
     {

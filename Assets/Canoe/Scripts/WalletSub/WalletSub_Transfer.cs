@@ -82,7 +82,7 @@ public class WalletSub_Transfer : MonoBehaviour
                     {
                         WalletController.Instance.ShowNotice("The request is failed!");
                     }
-
+            
             };
             UniTransfer();
         }
@@ -92,4 +92,28 @@ public class WalletSub_Transfer : MonoBehaviour
 
         }
     }
+
+    // IEnumerator IE_UniTransfer()
+    // {
+    //     bool await_finished = false;
+    //     Func<UniTaskVoid> UniTransfer = async () =>
+    //     {
+    //         RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, (ulong)transferAmount);
+    //         if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
+    //         {
+    //             WalletController.Instance.ShowNotice("The request is successful!");
+    //         }
+    //         else
+    //         {
+    //             WalletController.Instance.ShowNotice("The request is failed!");
+    //         }
+    //         await_finished = true;
+    //
+    //     };
+    //     UniTransfer();
+    //     yield return new WaitUntil(() => await_finished); //异步行为完成
+    //     
+    //     //todo...
+    //     
+    // }
 }

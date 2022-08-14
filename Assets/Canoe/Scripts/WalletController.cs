@@ -1,4 +1,5 @@
-﻿using Canoe;
+﻿using System;
+using Canoe;
 using Solana.Unity.Rpc.Core.Http;
 using Solana.Unity.Rpc.Models;
 using Solana.Unity.Wallet;
@@ -133,8 +134,15 @@ public class WalletController : MonoBehaviour
         Panel_Notice.GetComponent<Wallet_Notice>().ShowNotice(msg);
     }
 
-    public void OnDead()
+    private Action onRebornCallback = null;
+    public void OnDead(Action onRebornCallback)
     {
-        
+        this.onRebornCallback = onRebornCallback;
+    }
+
+    public void OnReborn()
+    {
+        this.onRebornCallback?.Invoke();
+        this.onRebornCallback = null;
     }
 }

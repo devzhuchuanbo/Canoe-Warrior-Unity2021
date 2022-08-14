@@ -1177,8 +1177,15 @@ public class NinjaMovementScript : MonoBehaviour
 		else
 		{
 			// base.Invoke("iHetMang", 1f);
-			WalletController.Instance.OnDead();
+			WalletController.Instance.OnDead(onRebordHandle);
 		}
+		
+	}
+
+	void onRebordHandle()
+	{
+		base.Invoke("BackToCP", 2f);
+		base.Invoke("iReborn", 3f);
 	}
 
 	public void iReborn()

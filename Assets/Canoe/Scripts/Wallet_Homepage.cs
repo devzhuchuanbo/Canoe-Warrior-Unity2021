@@ -1,4 +1,5 @@
 using Canoe;
+using Solana.Unity.Rpc.Models;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -22,7 +23,15 @@ public class Wallet_Homepage : MonoBehaviour
     }
     public async Task UpdateAARTValue()
     {
-        var tokenResults = await CanoeDeFi.Instance.GetOwnedTokenAccounts();
+       TokenAccount[] tokenResults = await CanoeDeFi.Instance.GetOwnedTokenAccounts();
+        foreach (var item in tokenResults)
+        {
+            if (item.Account.Data.Parsed.Info.Mint==WalletController.Instance.AARTMINT)
+            {
+                WalletController.Instance.CurrentAARTTokenAccount = item;
+                AARTValue.text = item.Account.Data.Parsed.Info.TokenAmount.AmountDouble.ToString();
+            }
+        }
     }
 
 }

@@ -1,5 +1,6 @@
 ﻿using Canoe;
 using Solana.Unity.Rpc.Core.Http;
+using Solana.Unity.Rpc.Models;
 using Solana.Unity.Wallet;
 using Solana.Unity.Wallet.Bip39;
 using System.Collections;
@@ -13,6 +14,8 @@ public class WalletController : MonoBehaviour
     public static WalletController Instance;
     //Notice: this is a demo for show, you shuld use pwd form user's input
     public readonly string PASSWORD = "demopassword";
+    public readonly string AARTCANOEADDRESS = "Canoe7wkcZcdF6qKqWghq8fD2UkD4rhg1QxkS3H1g6NZ";
+    public readonly string AARTMINT = "F3nefJBcejYbtdREjui1T9DPh5dBgpkKq7u2GAAMXs5B";
 
     #region Public GameObject Members
 
@@ -33,6 +36,7 @@ public class WalletController : MonoBehaviour
 
     public Mnemonic Mnemonic;
     public Wallet CurrentWallet;
+    public TokenAccount CurrentAARTTokenAccount;
     [HideInInspector]
     public double SOLBalance;
     [HideInInspector]
@@ -62,7 +66,7 @@ public class WalletController : MonoBehaviour
         else
         {
             //login with pwd
-          bool loginResult=  CanoeDeFi.Instance.LoginWithPwd(PASSWORD);
+            bool loginResult = CanoeDeFi.Instance.LoginWithPwd(PASSWORD);
             if (loginResult)
             {
                 Panel_Homepage.SetActive(true);
@@ -84,8 +88,19 @@ public class WalletController : MonoBehaviour
 
     public async Task<RequestResult<string>> Reborn()
     {
-      var  SPLResult = await CanoeDeFi.Instance.GetOwnedTokenAccounts();
-        RequestResult<string> result =  await CanoeDeFi.Instance.TransferToken(SPLResult[0].PublicKey, "xxxxxxxx", CurrentWallet.GetAccount(0), SPLResult[0].Account.Data.Parsed.Info.Mint,3000);
+        if (CurrentAARTTokenAccount == null)
+        {
+            var SPLResult = await CanoeDeFi.Instance.GetOwnedTokenAccounts();
+            foreach (var item in SPLResult)
+            {
+
+                if (item.Account.Data.Parsed.Info.Mint == WalletController.Instance.AARTMINT)
+                {
+                    CurrentAARTTokenAccount = item;
+                }
+            }
+        }
+        RequestResult<string> result = await CanoeDeFi.Instance.TransferToken(CurrentAARTTokenAccount.PublicKey, AARTCANOEADDRESS, CurrentWallet.GetAccount(0), AARTMINT, 6, 29);
         return result;
     }
     public void ShowNotice(string msg)

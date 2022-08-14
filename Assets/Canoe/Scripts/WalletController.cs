@@ -28,6 +28,8 @@ public class WalletController : MonoBehaviour
     //public GameObject Panel_Transfer;
     //public GameObject Panel_Swap;
     //public GameObject Panel_TransferConfirm;
+    public GameObject Panel_OnDead;
+    public GameObject Panel_NoticeDig;
     public GameObject Panel_Notice;
 
     #endregion

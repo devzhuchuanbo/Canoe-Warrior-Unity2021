@@ -62,7 +62,7 @@ public class WalletController : MonoBehaviour
     }
 
     // when wallet need to be shown
-    void WalletStart()
+    public void WalletStart()
     {
         if (!CanoeDeFi.Instance.HasWallet())
         {
@@ -92,13 +92,21 @@ public class WalletController : MonoBehaviour
         {
             HomePage.RefreshBalance();
         }
-        
+
     }
     public void GenerateNewWallet(Mnemonic mnemonic)
     {
         CanoeDeFi.Instance.GenerateNewWallet();
     }
+    public bool IsHasEnoughAART()
+    {
+        if (AARTBalance<29)
+        {
 
+        }
+        return AARTBalance >= 29;
+    }
+    //public void 
     public async Task<RequestResult<string>> Reborn()
     {
         if (CurrentAARTTokenAccount == null)

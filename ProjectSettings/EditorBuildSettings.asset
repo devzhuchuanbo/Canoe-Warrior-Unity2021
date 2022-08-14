@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Canoe/Scene/UITestNew.unity
+    guid: 905ad4e3337f3d9489d5def50d47c977
+  - enabled: 1
     path: Assets/Scenes/First.unity
     guid: 83c5a00fb6fbdb14596121e655455418
   - enabled: 1

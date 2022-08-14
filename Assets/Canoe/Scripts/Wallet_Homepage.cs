@@ -12,6 +12,9 @@ public class Wallet_Homepage : MonoBehaviour
 {
     public Text SOLValue;
     public Text AARTValue;
+
+    public Text CoinValue;
+    public Text DiamandValue;
   
     private void OnEnable()
     {
@@ -38,6 +41,9 @@ public class Wallet_Homepage : MonoBehaviour
             }
         };
         aartBalance();
+
+        CoinValue.text = PlayerPrefs.GetInt("Coin", 0).ToString();
+        DiamandValue.text = PlayerPrefs.GetInt("DM", 0).ToString();
     }
    
 

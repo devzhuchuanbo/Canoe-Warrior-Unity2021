@@ -6019,6 +6019,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SOLValue: {fileID: 4181527626803750285}
   AARTValue: {fileID: 3337315275478109467}
+  CoinValue: {fileID: 4417528540864324678}
+  DiamandValue: {fileID: 6072035971407957079}
 --- !u!1 &2337875739793528890
 GameObject:
   m_ObjectHideFlags: 0
@@ -24502,7 +24504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7840945127140948241
 RectTransform:
   m_ObjectHideFlags: 0

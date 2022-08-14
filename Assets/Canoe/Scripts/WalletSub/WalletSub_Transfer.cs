@@ -34,23 +34,7 @@ public class WalletSub_Transfer : MonoBehaviour
     {
 
     }
-    public void TestBtn()
-    {
-        Debug.Log("Start transfer");
-        Func<UniTaskVoid> ClickAfterSeconds = async () =>
-        {
-            while (true)
-            {
-                await UniTask.Delay(TimeSpan.FromSeconds(5.0));                 //µ»¥˝5√Î÷” 
-                Debug.Log("5s");
-            }
-
-        };
-        ClickAfterSeconds();
-
-        Debug.Log("Done");
-
-    }
+   
     public void TransferBtn()
     {
         if (string.IsNullOrEmpty(TargetAddress.text))
@@ -87,14 +71,9 @@ public class WalletSub_Transfer : MonoBehaviour
                 transferAmount *= 1000000;
             }
 
-            Func<UniTaskVoid> ClickAfterSeconds = async () =>
+            Func<UniTaskVoid> UniTransfer = async () =>
             {
-                //while (true)
-                //{
-                    //await UniTask.Delay(TimeSpan.FromSeconds(5.0));                 //µ»¥˝5√Î÷” 
-                    //await UniTask.Delay(TimeSpan.FromSeconds(5.0));                 //µ»¥˝5√Î÷”
                     RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, (ulong)transferAmount);
-                    Debug.Log("5s");
                     if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
                     {
                         WalletController.Instance.ShowNotice("The request is successful!");
@@ -103,20 +82,14 @@ public class WalletSub_Transfer : MonoBehaviour
                     {
                         WalletController.Instance.ShowNotice("The request is failed!");
                     }
-                //}
 
             };
-            ClickAfterSeconds();
+            UniTransfer();
+        }
+        //transfer aart
+        else
+        {
 
-            //RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, (ulong)transferAmount);
-            //if (transferResult.Reason!="OK"|| transferResult.Reason != "ok")
-            //{
-            //    WalletController.Instance.ShowNotice("The request is successful!");
-            //}
-            //else
-            //{
-            //    WalletController.Instance.ShowNotice("The request is failed!");
-            //}
         }
     }
 }

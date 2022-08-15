@@ -7,6 +7,7 @@ public class Wallet_NoticeDig : MonoBehaviour
 {
     public Text msg;
 
+
     public void ShowAARTTrad()
     {
         msg.text = " AART is insufficient \n [Trade to get AART]";
@@ -20,6 +21,7 @@ public class Wallet_NoticeDig : MonoBehaviour
     public void ConfirmBtn()
     {
         WalletController.Instance.WalletStart();
+        this.gameObject.SetActive(false);
     }
 
 }

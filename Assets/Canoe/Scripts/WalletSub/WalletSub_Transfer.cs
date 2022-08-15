@@ -22,7 +22,7 @@ public class WalletSub_Transfer : MonoBehaviour
     public Sprite SOLSprite, AARTSprite;
     public Text Balance;
     public bool isTransferSOL = true;
-
+    public Text TokenName;
     private double transferAmount = 0;
 
     private Wallet_Homepage wallet_Homepage;
@@ -38,12 +38,14 @@ public class WalletSub_Transfer : MonoBehaviour
         isTransferSOL = true;
         TokenImage.sprite = SOLSprite;
         Balance.text = wallet_Homepage.SOLValue.text;
+        TokenName.text = "SOL";
     }
     public void SelectToken()
     {
         isTransferSOL = false;
         TokenImage.sprite = AARTSprite;
         Balance.text = wallet_Homepage.AARTValue.text;
+        TokenName.text = "AART";
     }
     public void SetAllBtn()
     {
@@ -85,11 +87,14 @@ public class WalletSub_Transfer : MonoBehaviour
             //SOL
             transferAmount *= 1000000000;
         }
-        //else
-        //{
-        //    //AART
-        //    transferAmount *= 1000000;
-        //}
+        else
+        {
+            //AART
+            transferAmount *= 1000000;
+        }
+
+
+
         if (isTransferSOL)
         {
 
@@ -126,37 +131,45 @@ public class WalletSub_Transfer : MonoBehaviour
                         }
                     }
                 }
-                Debug.Log("Prepare to transfer");
+                //Debug.Log("Prepare to transfer");
                 Debug.Log("Prepare to transfer");
                 RequestResult<string> transferResult;
-
-                transferResult = await TransferToken222(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, TargetAddress.text, WalletController.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, (ulong)transferAmount);
-                Debug.Log("transfer done :" + transferResult.Reason);
-                if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
+                try
                 {
-                    WalletController.Instance.ShowNotice("The request is successful!");
-                    WalletController.Instance.RefreshBanlace();
-                }
-                else
-                {
-                    Debug.Log("transfer resson:" + transferResult.Reason);
-                    WalletController.Instance.ShowNotice("The request is failed!");
+                    transferResult = await TransferToken(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, TargetAddress.text, CanoeDeFi.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, (ulong)transferAmount);
+                    Debug.Log("transfer done :" + transferResult.Reason);
+                    if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
+                    {
+                        WalletController.Instance.ShowNotice("The request is successful!");
+                        WalletController.Instance.RefreshBanlace();
+                    }
+                    else
+                    {
+                        Debug.Log("transfer resson:" + transferResult.Reason);
+                        WalletController.Instance.ShowNotice("The request is failed!");
+                    }
                 }
 
+                catch (Exception ex)
+                {
+                    Debug.LogError(ex.Message);
+                }
 
             };
             AARTTransferTask();
 
+
         }
+
     }
-    public async Task<RequestResult<string>> TransferToken222(string sourceTokenAccount, string toWalletAccount, Account sourceAccountOwner, string tokenMint, ulong amount = 1)
+    public async Task<RequestResult<string>> TransferToken(string sourceTokenAccount, string toWalletAccount, Account sourceAccountOwner, string tokenMint, ulong amount = 1)
     {
         Debug.Log("TransferToken222 Invoke");
         PublicKey associatedTokenAccountOwner = new PublicKey(toWalletAccount);
         Debug.Log("associatedTokenAccountOwner: " + associatedTokenAccountOwner);
         PublicKey mint = new PublicKey(tokenMint);
         Debug.Log("mint: " + tokenMint);
-        Account ownerAccount = WalletController.Instance.CurrentWallet.GetAccount(0);
+        Account ownerAccount = CanoeDeFi.Instance.CurrentWallet.GetAccount(0);
         Debug.Log("ownerAccount: " + ownerAccount);
         PublicKey associatedTokenAccount = AssociatedTokenAccountProgram.DeriveAssociatedTokenAccount(associatedTokenAccountOwner, new PublicKey(tokenMint));
         Debug.Log("associatedTokenAccount: " + associatedTokenAccount);
@@ -177,7 +190,7 @@ public class WalletSub_Transfer : MonoBehaviour
         {
             Debug.Log("info!=null ");
             PublicKey initialAccount =
-AssociatedTokenAccountProgram.DeriveAssociatedTokenAccount(ownerAccount, mint);
+    AssociatedTokenAccountProgram.DeriveAssociatedTokenAccount(ownerAccount, mint);
 
             Debug.Log($"initialAccount: {initialAccount}");
             transaction = new TransactionBuilder().
@@ -187,7 +200,7 @@ AssociatedTokenAccountProgram.DeriveAssociatedTokenAccount(ownerAccount, mint);
                     initialAccount,
                     associatedTokenAccount,
                     amount,
-                    6,//token小数点精度
+                    6,
                    ownerAccount, mint
                     )).
                 Build(new List<Account> { ownerAccount });
@@ -196,7 +209,6 @@ AssociatedTokenAccountProgram.DeriveAssociatedTokenAccount(ownerAccount, mint);
         {
             Debug.Log($"AssociatedTokenAccountOwner: {associatedTokenAccountOwner}");
             Debug.Log($"AssociatedTokenAccount: {associatedTokenAccount}");
-
 
             PublicKey initialAccount =
     AssociatedTokenAccountProgram.DeriveAssociatedTokenAccount(ownerAccount, mint);
@@ -256,27 +268,5 @@ AssociatedTokenAccountProgram.DeriveAssociatedTokenAccount(ownerAccount, mint);
         }
         return null;
     }
-    // IEnumerator IE_UniTransfer()
-    // {
-    //     bool await_finished = false;
-    //     Func<UniTaskVoid> UniTransfer = async () =>
-    //     {
-    //         RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, (ulong)transferAmount);
-    //         if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
-    //         {
-    //             WalletController.Instance.ShowNotice("The request is successful!");
-    //         }
-    //         else
-    //         {
-    //             WalletController.Instance.ShowNotice("The request is failed!");
-    //         }
-    //         await_finished = true;
-    //
-    //     };
-    //     UniTransfer();
-    //     yield return new WaitUntil(() => await_finished); //异步行为完成
-    //     
-    //     //todo...
-    //     
-    // }
+
 }

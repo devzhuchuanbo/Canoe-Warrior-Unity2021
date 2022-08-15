@@ -15,9 +15,10 @@ public class Wallet_GetMoreLives : MonoBehaviour
     {
         InsufficientNotice.text = "";
         double tokenBalance = WalletController.Instance.CurrentAARTTokenAccount.Account.Data.Parsed.Info.TokenAmount.AmountDouble;
-        if (tokenBalance <= 29)
+        if (WalletController.Instance.CurrentAARTTokenAccount != null)
         {
-            InsufficientNotice.text = "Insufficient";
+            if (tokenBalance <= 29)
+                InsufficientNotice.text = "Insufficient";
         }
     }
     public void ConfirmBtn()
@@ -26,6 +27,7 @@ public class Wallet_GetMoreLives : MonoBehaviour
         if (tokenBalance <= 29)
         {
             WalletController.Instance.WalletStart();
+            this.gameObject.SetActive(false);
         }
         else
         {
@@ -44,13 +46,14 @@ public class Wallet_GetMoreLives : MonoBehaviour
                         }
                     }
                 }
-                RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferToken(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, WalletController.Instance.AARTCANOEADDRESS, WalletController.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, 6, 23);
+                RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferToken(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, WalletController.Instance.AARTCANOEADDRESS, WalletController.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, 6, 29);
 
                 if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
                 {
                     WalletController.Instance.ShowNotice("The request is successful!");
                     WalletController.Instance.RefreshBanlace();
                     WalletController.Instance.OnReborn();
+                    this.gameObject.SetActive(false);
                 }
                 else
                 {
@@ -59,8 +62,7 @@ public class Wallet_GetMoreLives : MonoBehaviour
 
             };
             AARTTransferTask();
-
         }
     }
-    
+
 }

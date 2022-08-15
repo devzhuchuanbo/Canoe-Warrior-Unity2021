@@ -7,12 +7,12 @@ using UnityEngine.UI;
 public class WalletSub_Recieve : MonoBehaviour
 {
     public Text Addrss;
-    public Image QRCode;
+    public RawImage QRCode;
     private void OnEnable()
     {
         Addrss.text = CanoeDeFi.Instance.CurrentWallet.Account.PublicKey;
         //TODO: QRCode
-        //QRCode.texture = new Texture();
+        QRCode.texture = QRHelper.GenerateQRImage(Addrss.text);
     }
     public void CotyAddress()
     {

@@ -42,7 +42,19 @@ public class WalletController : MonoBehaviour
     #region Public Data Members
 
     public Mnemonic Mnemonic;
-    public Wallet CurrentWallet;
+    private Wallet currentWallet;
+    public Wallet CurrentWallet
+    {
+        get
+        {
+            if (currentWallet == null)
+            {
+                currentWallet = CanoeDeFi.Instance.CurrentWallet;
+            }
+            return currentWallet;
+        }
+        set => currentWallet = value;
+    }
     public TokenAccount CurrentAARTTokenAccount;
     [HideInInspector]
     public double SOLBalance;
@@ -60,8 +72,11 @@ public class WalletController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //UniClipboard.SetText("text you want to clip");
-        WalletStart();
+        bool loginResult = CanoeDeFi.Instance.LoginWithPwd(PASSWORD);
+        if (loginResult)
+        {
+            RefreshBanlace();
+        }
     }
 
     // when wallet need to be shown
@@ -96,6 +111,16 @@ public class WalletController : MonoBehaviour
             HomePage.RefreshBalance();
         }
 
+        if (CurrentAARTTokenAccount == null)
+        {
+            Func<Task> getTokenAccount = async () =>
+            {
+                await GetTokenAccount();
+            };
+            getTokenAccount();
+        }
+
+
     }
     public void GenerateNewWallet(Mnemonic mnemonic)
     {
@@ -103,14 +128,13 @@ public class WalletController : MonoBehaviour
     }
     public bool IsHasEnoughAART()
     {
-        if (AARTBalance<29)
+        if (AARTBalance < 29)
         {
 
         }
         return AARTBalance >= 29;
     }
-    //public void 
-    public async Task<RequestResult<string>> Reborn()
+    public async Task GetTokenAccount()
     {
         if (CurrentAARTTokenAccount == null)
         {
@@ -124,6 +148,14 @@ public class WalletController : MonoBehaviour
                 }
             }
         }
+    }
+    //public void 
+    public async Task<RequestResult<string>> Reborn()
+    {
+        if (CurrentAARTTokenAccount == null)
+        {
+            await GetTokenAccount();
+        }
         RequestResult<string> result = await CanoeDeFi.Instance.TransferToken(CurrentAARTTokenAccount.PublicKey, AARTCANOEADDRESS, CurrentWallet.GetAccount(0), AARTMINT, 6, 29);
         return result;
         // return null;
@@ -135,6 +167,9 @@ public class WalletController : MonoBehaviour
     }
 
     private Action onRebornCallback = null;
+
+
+
     public void OnDead(Action onRebornCallback)
     {
         this.onRebornCallback = onRebornCallback;

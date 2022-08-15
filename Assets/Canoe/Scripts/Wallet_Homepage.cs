@@ -15,7 +15,7 @@ public class Wallet_Homepage : MonoBehaviour
 
     public Text CoinValue;
     public Text DiamandValue;
-  
+
     private void OnEnable()
     {
         RefreshBalance();
@@ -40,11 +40,12 @@ public class Wallet_Homepage : MonoBehaviour
                 }
             }
         };
+
         aartBalance();
 
         CoinValue.text = PlayerPrefs.GetInt("Coin", 0).ToString();
         DiamandValue.text = PlayerPrefs.GetInt("DM", 0).ToString();
     }
-   
+
 
 }

@@ -34,33 +34,53 @@ public class Wallet_GetMoreLives : MonoBehaviour
             //trade
             Func<Task> AARTTransferTask = async () =>
             {
-                if (WalletController.Instance.CurrentAARTTokenAccount == null)
-                {
-                    var SPLResult = await CanoeDeFi.Instance.GetOwnedTokenAccounts();
-                    foreach (var item in SPLResult)
-                    {
-
-                        if (item.Account.Data.Parsed.Info.Mint == WalletController.Instance.AARTMINT)
-                        {
-                            WalletController.Instance.CurrentAARTTokenAccount = item;
-                        }
-                    }
-                }
-                RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferToken(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, WalletController.Instance.AARTCANOEADDRESS, WalletController.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, 6, 29);
-
+                var transferResult = await WalletController.Instance.TransferToken(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, WalletController.Instance.AARTCANOEADDRESS, CanoeDeFi.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, 29);
+                Debug.Log("transfer done :" + transferResult.Reason);
                 if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
                 {
-                    WalletController.Instance.ShowNotice("The request is successful!");
+                    //WalletController.Instance.ShowNotice("The request is successful!");
                     WalletController.Instance.RefreshBanlace();
                     WalletController.Instance.OnReborn();
                     this.gameObject.SetActive(false);
                 }
                 else
                 {
+                    Debug.Log("transfer resson:" + transferResult.Reason);
                     WalletController.Instance.ShowNotice("The request is failed!");
                 }
-
             };
+
+
+            ////trade
+            //Func<Task> AARTTransferTask = async () =>
+            //{
+            //    if (WalletController.Instance.CurrentAARTTokenAccount == null)
+            //    {
+            //        var SPLResult = await CanoeDeFi.Instance.GetOwnedTokenAccounts();
+            //        foreach (var item in SPLResult)
+            //        {
+
+            //            if (item.Account.Data.Parsed.Info.Mint == WalletController.Instance.AARTMINT)
+            //            {
+            //                WalletController.Instance.CurrentAARTTokenAccount = item;
+            //            }
+            //        }
+            //    }
+            //    RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferToken(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, WalletController.Instance.AARTCANOEADDRESS, WalletController.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, 6, 29);
+
+            //    if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
+            //    {
+            //        WalletController.Instance.ShowNotice("The request is successful!");
+            //        WalletController.Instance.RefreshBanlace();
+            //        WalletController.Instance.OnReborn();
+            //        this.gameObject.SetActive(false);
+            //    }
+            //    else
+            //    {
+            //        WalletController.Instance.ShowNotice("The request is failed!");
+            //    }
+
+            //};
             AARTTransferTask();
         }
     }

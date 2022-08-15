@@ -1,6 +1,12 @@
 using Canoe;
 using Cysharp.Threading.Tasks;
+using Solana.Unity.Programs;
+using Solana.Unity.Rpc;
+using Solana.Unity.Rpc.Builders;
 using Solana.Unity.Rpc.Core.Http;
+using Solana.Unity.Rpc.Messages;
+using Solana.Unity.Rpc.Models;
+using Solana.Unity.Wallet;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +25,7 @@ public class WalletSub_Transfer : MonoBehaviour
 
     private double transferAmount = 0;
 
-   private Wallet_Homepage wallet_Homepage;
+    private Wallet_Homepage wallet_Homepage;
     private void OnEnable()
     {
         TargetAddress.text = "";
@@ -43,7 +49,7 @@ public class WalletSub_Transfer : MonoBehaviour
     {
         if (isTransferSOL)
         {
-            Amount.text=(Convert.ToDouble( wallet_Homepage.SOLValue.text)-0.001).ToString();
+            Amount.text = (Convert.ToDouble(wallet_Homepage.SOLValue.text) - 0.001).ToString();
         }
         else
         {
@@ -79,26 +85,26 @@ public class WalletSub_Transfer : MonoBehaviour
             //SOL
             transferAmount *= 1000000000;
         }
-        else
-        {
-            //AART
-            transferAmount *= 1000000;
-        }
+        //else
+        //{
+        //    //AART
+        //    transferAmount *= 1000000;
+        //}
         if (isTransferSOL)
         {
-          
+
 
             Func<Task> SOLTransferTask = async () =>
             {
-                    RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, (ulong)transferAmount);
-                    if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
-                    {
-                        WalletController.Instance.ShowNotice("The request is successful!");
-                    }
-                    else
-                    {
-                        WalletController.Instance.ShowNotice("The request is failed!");
-                    }
+                RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, (ulong)transferAmount);
+                if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
+                {
+                    WalletController.Instance.ShowNotice("The request is successful!");
+                }
+                else
+                {
+                    WalletController.Instance.ShowNotice("The request is failed!");
+                }
 
             };
             SOLTransferTask();
@@ -121,9 +127,11 @@ public class WalletSub_Transfer : MonoBehaviour
                     }
                 }
                 Debug.Log("Prepare to transfer");
-                RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferToken(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, TargetAddress.text, WalletController.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, 6, (ulong)transferAmount);
+                Debug.Log("Prepare to transfer");
+                RequestResult<string> transferResult;
 
-                Debug.Log("transfer done :" +transferResult.Reason);
+                transferResult = await TransferToken222(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, TargetAddress.text, WalletController.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, (ulong)transferAmount);
+                Debug.Log("transfer done :" + transferResult.Reason);
                 if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
                 {
                     WalletController.Instance.ShowNotice("The request is successful!");
@@ -131,15 +139,123 @@ public class WalletSub_Transfer : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("transfer resson:" + transferResult.Reason);
                     WalletController.Instance.ShowNotice("The request is failed!");
                 }
 
+
             };
             AARTTransferTask();
-            
+
         }
     }
+    public async Task<RequestResult<string>> TransferToken222(string sourceTokenAccount, string toWalletAccount, Account sourceAccountOwner, string tokenMint, ulong amount = 1)
+    {
+        Debug.Log("TransferToken222 Invoke");
+        PublicKey associatedTokenAccountOwner = new PublicKey(toWalletAccount);
+        Debug.Log("associatedTokenAccountOwner: " + associatedTokenAccountOwner);
+        PublicKey mint = new PublicKey(tokenMint);
+        Debug.Log("mint: " + tokenMint);
+        Account ownerAccount = WalletController.Instance.CurrentWallet.GetAccount(0);
+        Debug.Log("ownerAccount: " + ownerAccount);
+        PublicKey associatedTokenAccount = AssociatedTokenAccountProgram.DeriveAssociatedTokenAccount(associatedTokenAccountOwner, new PublicKey(tokenMint));
+        Debug.Log("associatedTokenAccount: " + associatedTokenAccount);
 
+        RequestResult<ResponseValue<BlockHash>> blockHash = await ClientFactory.GetClient(CanoeDeFi.Instance.Env).GetRecentBlockHashAsync();
+        Debug.Log("blockHash: " + blockHash);
+        RequestResult<ulong> rentExemptionAmmount = await ClientFactory.GetClient(CanoeDeFi.Instance.Env).GetMinimumBalanceForRentExemptionAsync(TokenProgram.TokenAccountDataSize);
+        //TokenAccount[] lortAccounts = await GetOwnedTokenAccounts(toWalletAccount, tokenMint, "");
+        Debug.Log("rentExemptionAmmount: " + rentExemptionAmmount);
+        TokenAccount[] lortAccounts = await GetOwnedTokenAccounts(toWalletAccount, tokenMint, TokenProgram.ProgramIdKey);
+        Debug.Log("lortAccounts: " + lortAccounts);
+        byte[] transaction;
+        //try to make sure is the account already have a token account
+        var info = await GetAccountData(associatedTokenAccount);
+        Debug.Log("info: " + info);
+        //already have a token account
+        if (info != null)
+        {
+            Debug.Log("info!=null ");
+            PublicKey initialAccount =
+AssociatedTokenAccountProgram.DeriveAssociatedTokenAccount(ownerAccount, mint);
+
+            Debug.Log($"initialAccount: {initialAccount}");
+            transaction = new TransactionBuilder().
+                SetRecentBlockHash(blockHash.Result.Value.Blockhash).
+                SetFeePayer(ownerAccount).
+                AddInstruction(TokenProgram.TransferChecked(
+                    initialAccount,
+                    associatedTokenAccount,
+                    amount,
+                    6,//token小数点精度
+                   ownerAccount, mint
+                    )).
+                Build(new List<Account> { ownerAccount });
+        }
+        else
+        {
+            Debug.Log($"AssociatedTokenAccountOwner: {associatedTokenAccountOwner}");
+            Debug.Log($"AssociatedTokenAccount: {associatedTokenAccount}");
+
+
+            PublicKey initialAccount =
+    AssociatedTokenAccountProgram.DeriveAssociatedTokenAccount(ownerAccount, mint);
+
+            Debug.Log($"initialAccount: {initialAccount}");
+            transaction = new TransactionBuilder().
+                SetRecentBlockHash(blockHash.Result.Value.Blockhash).
+                SetFeePayer(ownerAccount).
+                AddInstruction(AssociatedTokenAccountProgram.CreateAssociatedTokenAccount(
+                    ownerAccount,
+                    associatedTokenAccountOwner,
+                    mint)).
+                AddInstruction(TokenProgram.TransferChecked(
+                    initialAccount,
+                    associatedTokenAccount,
+                    amount,
+                    9,//token小数点精度
+                   ownerAccount, mint
+                    )).// the ownerAccount was set as the mint authority
+                Build(new List<Account> { ownerAccount });
+        }
+
+        return await ClientFactory.GetClient(CanoeDeFi.Instance.Env).SendTransactionAsync(transaction);
+    }
+    private async Task<TokenAccount[]> GetOwnedTokenAccounts(string walletPubKey, string tokenMintPubKey, string tokenProgramPublicKey)
+    {
+        RequestResult<ResponseValue<List<TokenAccount>>> result = await ClientFactory.GetClient(CanoeDeFi.Instance.Env).GetTokenAccountsByOwnerAsync(walletPubKey, tokenMintPubKey, tokenProgramPublicKey);
+        if (result.Result != null && result.Result.Value != null)
+        {
+            return result.Result.Value.ToArray();
+        }
+        return null;
+    }
+    private async Task<TokenAccount[]> GetOwnedTokenAccounts(Account account)
+    {
+        try
+        {
+            RequestResult<ResponseValue<List<TokenAccount>>> result = await ClientFactory.GetClient(CanoeDeFi.Instance.Env).GetTokenAccountsByOwnerAsync(account.PublicKey, null, TokenProgram.ProgramIdKey);
+            if (result.Result != null && result.Result.Value != null)
+            {
+                return result.Result.Value.ToArray();
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.Log(ex);
+        }
+        return null;
+    }
+
+    private async Task<AccountInfo> GetAccountData(PublicKey account)
+    {
+        RequestResult<ResponseValue<AccountInfo>> result = await ClientFactory.GetClient(CanoeDeFi.Instance.Env).GetAccountInfoAsync(account);
+        if (result.Result != null && result.Result.Value != null)
+        {
+            return result.Result.Value;
+        }
+        return null;
+    }
     // IEnumerator IE_UniTransfer()
     // {
     //     bool await_finished = false;

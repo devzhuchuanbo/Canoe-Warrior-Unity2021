@@ -15379,7 +15379,7 @@ MonoBehaviour:
   Panel_OnDead: {fileID: 706149713053054624}
   Panel_NoticeDig: {fileID: 8756506033092757235}
   Panel_Notice: {fileID: 5287510764184463929}
-  HomePage: {fileID: 0}
+  HomePage: {fileID: 5416575884341067788}
   SOLBalance: 0
   AARTBalance: 0
 --- !u!1 &5287510764184463929

@@ -25,6 +25,7 @@ public class Wallet_Homepage : MonoBehaviour
         Func<Task> solBalance = async () =>
         {
             double solBalance = await CanoeDeFi.Instance.GetSolAmmountAsync();
+            WalletController.Instance.SOLBalance = solBalance;
             SOLValue.text = solBalance.ToString();
         };
         solBalance();
@@ -36,6 +37,7 @@ public class Wallet_Homepage : MonoBehaviour
                 if (item.Account.Data.Parsed.Info.Mint == WalletController.Instance.AARTMINT)
                 {
                     WalletController.Instance.CurrentAARTTokenAccount = item;
+                    WalletController.Instance.AARTBalance = item.Account.Data.Parsed.Info.TokenAmount.AmountDouble;
                     AARTValue.text = item.Account.Data.Parsed.Info.TokenAmount.AmountDouble.ToString();
                 }
             }

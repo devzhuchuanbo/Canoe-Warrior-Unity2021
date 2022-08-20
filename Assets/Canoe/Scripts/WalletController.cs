@@ -1,5 +1,4 @@
 ﻿using Canoe;
-using Cysharp.Threading.Tasks;
 using Solana.Unity.Programs;
 using Solana.Unity.Rpc;
 using Solana.Unity.Rpc.Builders;
@@ -22,7 +21,10 @@ public class WalletController : MonoBehaviour
     //Notice: this is a demo for show, you shuld use pwd form user's input
     public readonly string PASSWORD = "demopassword";
     public readonly string AARTCANOEADDRESS = "Canoe7wkcZcdF6qKqWghq8fD2UkD4rhg1QxkS3H1g6NZ";
-    public readonly string AARTMINT = "F3nefJBcejYbtdREjui1T9DPh5dBgpkKq7u2GAAMXs5B";
+
+    public readonly string SOLMINT = "So11111111111111111111111111111111111111112";
+    //public readonly string AARTMINT = "F3nefJBcejYbtdREjui1T9DPh5dBgpkKq7u2GAAMXs5B";
+    public readonly string AARTMINT = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v";
 
     #region Public GameObject Members
 
@@ -193,7 +195,6 @@ public class WalletController : MonoBehaviour
 
     public async Task<RequestResult<string>> TransferToken(string sourceTokenAccount, string toWalletAccount, Account sourceAccountOwner, string tokenMint, ulong amount = 1)
     {
-        Debug.Log("TransferToken222 Invoke");
         PublicKey associatedTokenAccountOwner = new PublicKey(toWalletAccount);
         Debug.Log("associatedTokenAccountOwner: " + associatedTokenAccountOwner);
         PublicKey mint = new PublicKey(tokenMint);
@@ -204,7 +205,7 @@ public class WalletController : MonoBehaviour
         Debug.Log("associatedTokenAccount: " + associatedTokenAccount);
 
         RequestResult<ResponseValue<BlockHash>> blockHash = await ClientFactory.GetClient(CanoeDeFi.Instance.Env).GetRecentBlockHashAsync();
-        Debug.Log("blockHash: " + blockHash);
+
         RequestResult<ulong> rentExemptionAmmount = await ClientFactory.GetClient(CanoeDeFi.Instance.Env).GetMinimumBalanceForRentExemptionAsync(TokenProgram.TokenAccountDataSize);
         //TokenAccount[] lortAccounts = await GetOwnedTokenAccounts(toWalletAccount, tokenMint, "");
         Debug.Log("rentExemptionAmmount: " + rentExemptionAmmount);
@@ -213,7 +214,7 @@ public class WalletController : MonoBehaviour
         byte[] transaction;
         //try to make sure is the account already have a token account
         var info = await GetAccountData(associatedTokenAccount);
-        Debug.Log("info: " + info);
+
         //already have a token account
         if (info != null)
         {
@@ -254,7 +255,7 @@ public class WalletController : MonoBehaviour
                     initialAccount,
                     associatedTokenAccount,
                     amount,
-                    9,//token小数点精度
+                    6,
                    ownerAccount, mint
                     )).// the ownerAccount was set as the mint authority
                 Build(new List<Account> { ownerAccount });

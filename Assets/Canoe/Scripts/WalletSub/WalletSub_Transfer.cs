@@ -1,5 +1,4 @@
 using Canoe;
-using Cysharp.Threading.Tasks;
 using Solana.Unity.Programs;
 using Solana.Unity.Rpc;
 using Solana.Unity.Rpc.Builders;
@@ -32,6 +31,7 @@ public class WalletSub_Transfer : MonoBehaviour
         TargetAddress.text = "";
 
         wallet_Homepage = GetComponentInParent<Wallet_Homepage>();
+        SelectSOL();
     }
     public void SelectSOL()
     {

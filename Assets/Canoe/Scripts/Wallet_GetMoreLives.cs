@@ -23,7 +23,20 @@ public class Wallet_GetMoreLives : MonoBehaviour
     }
     public void ConfirmBtn()
     {
-        double tokenBalance = WalletController.Instance.CurrentAARTTokenAccount.Account.Data.Parsed.Info.TokenAmount.AmountDouble;
+        double tokenBalance = 0;
+
+        try
+        {
+            tokenBalance = WalletController.Instance.CurrentAARTTokenAccount.Account.Data.Parsed.Info.TokenAmount.AmountDouble;
+        }
+        catch (Exception ex)
+        {
+            WalletController.Instance.WalletStart();
+            this.gameObject.SetActive(false);
+            return;
+        }
+
+        //tokenBalance = WalletController.Instance.CurrentAARTTokenAccount.Account.Data.Parsed.Info.TokenAmount.AmountDouble;
         if (tokenBalance <= 29)
         {
             WalletController.Instance.WalletStart();
@@ -34,7 +47,7 @@ public class Wallet_GetMoreLives : MonoBehaviour
             //trade
             Func<Task> AARTTransferTask = async () =>
             {
-                var transferResult = await WalletController.Instance.TransferToken(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, WalletController.Instance.AARTCANOEADDRESS, CanoeDeFi.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, 29);
+                var transferResult = await WalletController.Instance.TransferToken(WalletController.Instance.CurrentAARTTokenAccount.PublicKey, WalletController.Instance.AARTCANOEADDRESS, CanoeDeFi.Instance.CurrentWallet.GetAccount(0), WalletController.Instance.AARTMINT, 29000000);
                 Debug.Log("transfer done :" + transferResult.Reason);
                 if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
                 {

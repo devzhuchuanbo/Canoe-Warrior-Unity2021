@@ -93,12 +93,8 @@ public class WalletSub_Transfer : MonoBehaviour
             transferAmount *= 1000000;
         }
 
-
-
         if (isTransferSOL)
         {
-
-
             Func<Task> SOLTransferTask = async () =>
             {
                 RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, (ulong)transferAmount);
@@ -155,10 +151,7 @@ public class WalletSub_Transfer : MonoBehaviour
 
             };
             AARTTransferTask();
-
-
         }
-
     }
 
 }

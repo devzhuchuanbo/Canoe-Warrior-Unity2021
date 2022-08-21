@@ -23,8 +23,8 @@ public class WalletController : MonoBehaviour
     public readonly string AARTCANOEADDRESS = "Canoe7wkcZcdF6qKqWghq8fD2UkD4rhg1QxkS3H1g6NZ";
 
     public readonly string SOLMINT = "So11111111111111111111111111111111111111112";
-    //public readonly string AARTMINT = "F3nefJBcejYbtdREjui1T9DPh5dBgpkKq7u2GAAMXs5B";
-    public readonly string AARTMINT = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v";
+    public readonly string AARTMINT = "F3nefJBcejYbtdREjui1T9DPh5dBgpkKq7u2GAAMXs5B";
+    //public readonly string AARTMINT = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v";
 
     #region Public GameObject Members
 
@@ -173,7 +173,11 @@ public class WalletController : MonoBehaviour
         Panel_Notice.SetActive(true);
         Panel_Notice.GetComponent<Wallet_Notice>().ShowNotice(msg);
     }
-
+    public void CloseNotice()
+    {
+        Panel_Notice.SetActive(false);
+        Panel_Notice.GetComponent<Wallet_Notice>().ShowNotice("");
+    }
     private Action onRebornCallback = null;
 
 

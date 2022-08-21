@@ -65,10 +65,16 @@ public class WalletSub_Trade : MonoBehaviour
         bool isFromSOL = FromName.text == "SOL" ? true : false;
         var inMint = isFromSOL ? WalletController.Instance.SOLMINT : WalletController.Instance.AARTMINT;
         var outMint = isFromSOL ? WalletController.Instance.AARTMINT : WalletController.Instance.SOLMINT;
-        ulong amount = isFromSOL ?(ulong)( inputDouble * 1000000000 ): (ulong)(inputDouble * 1000000);
+        ulong amount = isFromSOL ? (ulong)(inputDouble * 1000000000) : (ulong)(inputDouble * 1000000);
 
         StartCoroutine(
-      CanoeDeFi.Instance.RequestJupiterOutputAmount(inMint, outMint, amount, slippage, 4, WalletController.Instance.AARTCANOEADDRESS, (s) => { Debug.Log("out:" + s); OutputValue.text = s.ToString(); }));
+      CanoeDeFi.Instance.RequestJupiterOutputAmount(inMint, outMint, amount, slippage, 4, WalletController.Instance.AARTCANOEADDRESS, (s) =>
+      {
+          Debug.Log("out:" + s);
+          bool isFromSOL = FromName.text == "SOL" ? true : false;
+          double outvalue = Convert.ToDouble(s);
+          OutputValue.text = isFromSOL ? (outvalue / 1000000).ToString() : (outvalue / 1000000000).ToString();
+      }));
     }
 
     public void ExchanceBtn()
@@ -101,21 +107,21 @@ public class WalletSub_Trade : MonoBehaviour
         var inMint = isFromSOL ? WalletController.Instance.SOLMINT : WalletController.Instance.AARTMINT;
         var outMint = isFromSOL ? WalletController.Instance.AARTMINT : WalletController.Instance.SOLMINT;
         ulong amount = isFromSOL ? (ulong)(inputDouble * 1000000000) : (ulong)(inputDouble * 1000000);
-        
-     //CanoeDeFi.Instance.JupiterSwapRequest(inMint, outMint, amount, slippage, 4, WalletController.Instance.AARTCANOEADDRESS, (s) => 
-     CanoeDeFi.Instance.JupiterSwapRequest(inMint, outMint, amount, slippage, 4, "", (s) => 
-     {
-         if (s.WasSuccessful)
-         {
-             WalletController.Instance.ShowNotice("The request is successful!");
-         }
-         else
-         {
-             WalletController.Instance.ShowNotice("The request is failed!");
-         }
-     });
 
-        //CanoeDeFi.Instance.JupiterSwapRequest("So11111111111111111111111111111111111111112", WalletController.Instance.AARTMINT, (ulong)(inputDouble * 1000000), 0.5f, 4, WalletController.Instance.AARTCANOEADDRESS, (s) => { Debug.Log("result:" + s); });
+        CanoeDeFi.Instance.JupiterSwapRequest(inMint, outMint, amount, slippage, 4, WalletController.Instance.AARTCANOEADDRESS, (tf) =>
+        //CanoeDeFi.Instance.JupiterSwapRequest(inMint, outMint, amount, slippage, 4, "", (s) =>
+        {
+            WalletController.Instance.CloseNotice();
+            if (tf)
+            {
+             WalletController.Instance.ShowNotice("The request is successful!");
+            }
+            else
+            {
+                WalletController.Instance.ShowNotice("The request is failed!");
+            }
+        });
+        WalletController.Instance.ShowNotice("Processing, please wait...");
     }
     public void ChangeSlippage(float _slippage)
     {
@@ -123,28 +129,7 @@ public class WalletSub_Trade : MonoBehaviour
         Slippage.text = slippage.ToString() + "%";
     }
 
-    void Trade()
-    {
-        //Func<Task> TradeTask = async () =>
-        //{
-        //    RequestResult<string> transferResult = await CanoeDeFi.Instance.TransferSol(TargetAddress.text, (ulong)transferAmount);
-        //    if (transferResult.Reason == "OK" || transferResult.Reason == "ok")
-        //    {
-        //        WalletController.Instance.ShowNotice("The request is successful!");
-        //    }
-        //    else
-        //    {
-        //        WalletController.Instance.ShowNotice("The request is failed!");
-        //    }
 
-        //};
-        //TradeTask();
-    }
-    void Test()
-    {
-        string routUrlWithPams = "https://quote-api.jup.ag/v1/quote?inputMint=" + WalletController.Instance.AARTMINT + "&outputMint=" + "So11111111111111111111111111111111111111112" + "&amount=" + 100000000 + "&slippage=" + "0.5" + "&feeBps=4";
-        StartCoroutine(GetJupiterTx(routUrlWithPams));
-    }
     private IEnumerator GetJupiterTx(string routeUrlWithPams)
     {
         //get jupiter route
@@ -220,7 +205,6 @@ public class WalletSub_Trade : MonoBehaviour
         }
         byte[] txBytes = tb.
        Build(new List<Account> { CanoeDeFi.Instance.CurrentWallet.Account });
-
 
         var result = await ClientFactory.GetClient(Cluster.MainNet).SendTransactionAsync(txBytes);
         jupiterSwapResult = result;

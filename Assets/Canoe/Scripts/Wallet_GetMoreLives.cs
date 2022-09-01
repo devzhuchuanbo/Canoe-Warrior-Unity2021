@@ -14,11 +14,14 @@ public class Wallet_GetMoreLives : MonoBehaviour
     public void OnEnable()
     {
         InsufficientNotice.text = "";
-        double tokenBalance = WalletController.Instance.CurrentAARTTokenAccount.Account.Data.Parsed.Info.TokenAmount.AmountDouble;
-        if (WalletController.Instance.CurrentAARTTokenAccount != null)
+        if (WalletController.Instance.CurrentAARTTokenAccount!=null)
         {
-            if (tokenBalance <= 29)
-                InsufficientNotice.text = "Insufficient";
+            double tokenBalance = WalletController.Instance.CurrentAARTTokenAccount.Account.Data.Parsed.Info.TokenAmount.AmountDouble;
+            if (WalletController.Instance.CurrentAARTTokenAccount != null)
+            {
+                if (tokenBalance <= 29)
+                    InsufficientNotice.text = "Insufficient";
+            }
         }
     }
     public void ConfirmBtn()

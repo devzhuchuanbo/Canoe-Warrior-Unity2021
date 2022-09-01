@@ -18,7 +18,7 @@ public class RateOk : MonoBehaviour
 			UnityEngine.Debug.Log("Ok,quit");
 			PlayerPrefs.SetInt("Rated", 1);
 			PlayerPrefs.Save();
-			Application.OpenURL("");
+			Application.OpenURL("https://github.com/Canoe-Finance/Solana-Gaming-DeFi-SDK");
 			Application.Quit();
 		}
 	}

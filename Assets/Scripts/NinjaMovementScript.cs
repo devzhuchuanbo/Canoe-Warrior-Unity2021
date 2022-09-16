@@ -71,6 +71,24 @@ public class NinjaMovementScript : MonoBehaviour
 			Button_Jump_press();
 			//print("space key was pressed");
 		}
+#if UNITY_EDITOR
+		if (Input.GetKeyDown("d"))
+        {
+			Button_Right_press();
+        }
+        if (Input.GetKeyUp("d"))
+        {
+            Button_Right_release();
+        }
+        if (Input.GetKeyDown("a"))
+        {
+            Button_Left_press();
+        }
+        if (Input.GetKeyUp("a"))
+        {
+            Button_Left_release();
+        }
+#endif
 		if (this.walljump_count >= 0f)
 		{
 			this.walljump_count -= Time.deltaTime;
